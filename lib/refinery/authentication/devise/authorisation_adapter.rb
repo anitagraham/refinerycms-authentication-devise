@@ -16,11 +16,6 @@ module Refinery
         end
 
         def allow?(operation, resource)
-          Rails.logger.debug('. . . . . . . . . .')
-          Rails.logger.debug(operation)
-          Rails.logger.debug(current_user.active_plugins.names)
-          Rails.logger.debug(resource)
-          Rails.logger.debug('. . . . . . . . . .')
           case
           when resource == :site_bar
             current_user.has_role?(:refinery)
